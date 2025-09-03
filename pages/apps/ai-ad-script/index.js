@@ -1,0 +1,1 @@
+export default function P(){return <div className='min-h-screen p-10'><a href='/apps/ai-ad-script/dashboard' className='btn'>Open AI Ad Script Generator dashboard</a></div>}

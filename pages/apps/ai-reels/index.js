@@ -1,0 +1,1 @@
+export default function P(){return <div className='min-h-screen p-10'><a href='/apps/ai-reels/dashboard' className='btn'>Open AI Reels Factory dashboard</a></div>}
