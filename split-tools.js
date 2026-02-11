@@ -2,18 +2,14 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-// Input file
-const combinedFile = path.join(__dirname, 'assets_raw', 'combined_tools.png');
-
-// Output folder
+// Input and output paths
+const srcFile = path.join(__dirname, 'assets_raw', 'combined_tools.png');
 const destFolder = path.join(__dirname, 'public', 'images');
 
-// Create output folder if not exists
-if (!fs.existsSync(destFolder)) {
-  fs.mkdirSync(destFolder, { recursive: true });
-}
+// Create destination folder if not exists
+if (!fs.existsSync(destFolder)) fs.mkdirSync(destFolder, { recursive: true });
 
-// Names for each individual tool image
+// Tool names
 const toolNames = [
   'sociaboost.png',
   'autoprompt.png',
@@ -23,16 +19,20 @@ const toolNames = [
   'ai-reels.png'
 ];
 
-// Assuming combined image is horizontal row: 6 images of equal width
-const width = 400;   // adjust if your icons are larger
+// Dimensions of each tool in combined image
+const width = 400;  // adjust if your icons are wider
 const height = 400;
 
-toolNames.forEach((name, index) => {
-  sharp(combinedFile)
-    .extract({ left: index * width, top: 0, width: width, height: height })
-    .toFile(path.join(destFolder, name))
-    .then(() => console.log(`Created ${name}`))
-    .catch(err => console.error(err));
-});
-
-console.log('Splitting and resizing started...');
+(async () => {
+  try {
+    for (let i = 0; i < toolNames.length; i++) {
+      await sharp(srcFile)
+        .extract({ left: i * width, top: 0, width, height })
+        .toFile(path.join(destFolder, toolNames[i]));
+      console.log(`✅ Created ${toolNames[i]}`);
+    }
+    console.log('🎉 All images split and resized successfully!');
+  } catch (err) {
+    console.error('❌ Error:', err);
+  }
+})();
