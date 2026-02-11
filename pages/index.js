@@ -1,181 +1,143 @@
 export default function Home() {
   return (
-    <main className="font-sans">
+    <main className="min-h-screen bg-white text-gray-900">
 
-      {/* HERO SECTION */}
-      <section className="py-20 text-center">
+      {/* HERO */}
+      <section className="py-24 text-center max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-4">
-          Launch or Flip Revenue-Ready AI Products Faster
+          AI Startup Studio
         </h1>
-
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
-          An AI startup studio building deploy-ready SaaS tools for founders,
-          agencies, and AI product flippers.
+        <p className="text-lg text-gray-600 mb-8">
+          A growing portfolio of AI SaaS products — ready to launch, license, or flip.
         </p>
-
-        <a
-          href="#products"
-          className="inline-block px-6 py-3 bg-black text-white rounded-lg"
-        >
-          View Available AI Products
-        </a>
-      </section>
-
-      {/* TARGET AUDIENCE */}
-      <section className="py-16 bg-gray-50 text-center">
-        <h2 className="text-2xl font-semibold mb-8">Who This Is For</h2>
-
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          <div>
-            <p className="font-medium">Startup founders</p>
-            <p className="text-sm text-gray-600">
-              Launch AI products without building from scratch
-            </p>
-          </div>
-
-          <div>
-            <p className="font-medium">Agencies</p>
-            <p className="text-sm text-gray-600">
-              White-label AI tools for clients
-            </p>
-          </div>
-
-          <div>
-            <p className="font-medium">AI tool flippers</p>
-            <p className="text-sm text-gray-600">
-              Sell ready-made SaaS on marketplaces
-            </p>
-          </div>
+        <div className="flex justify-center gap-4">
+          <a href="#available" className="px-6 py-3 bg-black text-white rounded">
+            View Products
+          </a>
+          <a href="#bundle" className="px-6 py-3 border rounded">
+            Buy Full Bundle
+          </a>
         </div>
       </section>
 
-      {/* AVAILABLE PRODUCTS */}
-      <section id="products" className="py-20">
+      {/* AVAILABLE */}
+      <section id="available" className="py-20 bg-gray-50">
         <h2 className="text-3xl font-semibold text-center mb-12">
           Available AI Products
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <div className="border rounded-lg p-6">
-            <h3 className="text-xl font-semibold mb-2">SociaBoost AI</h3>
-            <p className="text-sm mb-2">
-              Automates social media growth and engagement using AI.
-            </p>
-            <p className="text-sm text-gray-600 mb-4">
-              Built for creators, brands, and agencies managing multiple platforms.
-            </p>
-            <span className="text-xs bg-green-100 px-2 py-1 rounded">
-              Ready
-            </span>
-          </div>
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
 
-          <div className="border rounded-lg p-6">
-            <h3 className="text-xl font-semibold mb-2">AutoPrompt AI</h3>
-            <p className="text-sm mb-2">
-              Pre-built AI prompt workflows for faster execution.
-            </p>
-            <p className="text-sm text-gray-600 mb-4">
-              Designed for developers, marketers, and AI operators.
-            </p>
-            <span className="text-xs bg-green-100 px-2 py-1 rounded">
-              Ready
-            </span>
-          </div>
+          <ToolCard
+            title="SociaBoost AI"
+            desc="AI social growth automation for creators and brands."
+            status="Ready"
+          />
+
+          <ToolCard
+            title="AutoPrompt AI"
+            desc="Automated prompt workflows and reusable templates."
+            status="Ready"
+          />
+
+          <ToolCard
+            title="AI Ad Script Generator"
+            desc="Instant ad copy for Meta, Google, TikTok, and more."
+            status="Ready"
+          />
+
+        </div>
+      </section>
+
+      {/* PRIVATE BETA */}
+      <section className="py-20">
+        <h2 className="text-3xl font-semibold text-center mb-12">
+          Private Beta
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto px-6">
+
+          <ToolCard
+            title="StoreBoost AI"
+            desc="AI-powered conversion optimization for eCommerce."
+            status="Private Beta"
+          />
+
+          <ToolCard
+            title="NicheBlog AI"
+            desc="Automated SEO-focused niche content engine."
+            status="Private Beta"
+          />
+
         </div>
       </section>
 
       {/* COMING SOON */}
       <section className="py-20 bg-gray-50">
         <h2 className="text-3xl font-semibold text-center mb-12">
-          Coming Soon / Private Beta
+          Coming Soon
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <div className="border rounded-lg p-6">
-            <h3 className="text-xl font-semibold mb-2">StoreBoost AI</h3>
-            <p className="text-sm mb-2">
-              Optimizes eCommerce content and conversions using AI.
-            </p>
-            <p className="text-sm text-gray-600 mb-4">
-              Built for online stores and digital brands.
-            </p>
-            <span className="text-xs bg-yellow-100 px-2 py-1 rounded">
-              Private Beta
-            </span>
-          </div>
+        <div className="max-w-md mx-auto px-6">
+          <ToolCard
+            title="AI Reels Factory"
+            desc="AI short-form video generator for TikTok, Reels, Shorts."
+            status="Coming Soon"
+          />
         </div>
       </section>
 
-      {/* MONETIZATION */}
-      <section className="py-20 text-center">
-        <h2 className="text-3xl font-semibold mb-6">
-          How You Can Work With Us
-        </h2>
-
-        <ul className="max-w-xl mx-auto text-gray-700 mb-6 space-y-2">
-          <li>Buy individual AI products</li>
-          <li>Bundle multiple tools at a discount</li>
-          <li>White-label or custom deployment</li>
-          <li>Partnership or revenue-share options</li>
-        </ul>
-
-        <a
-          href="mailto:your@email.com"
-          className="inline-block px-6 py-3 bg-black text-white rounded-lg"
-        >
-          Request Pricing
-        </a>
-      </section>
-
-      {/* WHAT YOU GET */}
-      <section className="py-20 bg-gray-50 text-center">
-        <h2 className="text-3xl font-semibold mb-6">
-          What You Get
-        </h2>
-
-        <ul className="max-w-xl mx-auto text-gray-700 space-y-2">
-          <li>Full source code and IP transfer</li>
-          <li>Deploy-ready setup (Vercel compatible)</li>
-          <li>Brand assets and landing page</li>
-          <li>Documentation and setup guide</li>
-          <li>Limited onboarding support</li>
-        </ul>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section className="py-20 text-center">
-        <h2 className="text-3xl font-semibold mb-6">
-          Early Feedback
-        </h2>
-
-        <p className="max-w-xl mx-auto text-gray-600">
-          Feedback from early users and pilot partners testing our AI products.
-        </p>
-      </section>
-
-      {/* LEAD CAPTURE */}
-      <section className="py-20 bg-black text-white text-center">
+      {/* BUNDLE */}
+      <section id="bundle" className="py-24 text-center max-w-4xl mx-auto">
         <h2 className="text-3xl font-semibold mb-4">
-          Get Early Access or Full Product Details
+          Full AI Startup Bundle
         </h2>
+        <p className="text-gray-600 mb-6">
+          Get all current tools plus future releases under one license.
+        </p>
 
-        <form className="max-w-md mx-auto">
-          <input
-            type="text"
-            placeholder="Your name"
-            className="w-full mb-3 px-4 py-2 rounded text-black"
-          />
-          <input
-            type="email"
-            placeholder="Your email"
-            className="w-full mb-3 px-4 py-2 rounded text-black"
-          />
-          <button className="w-full px-4 py-2 bg-white text-black rounded">
-            Get Access
-          </button>
-        </form>
+        <div className="border rounded-lg p-8">
+          <ul className="text-left mb-6 space-y-2">
+            <li>All 6 AI products</li>
+            <li>Full source code & IP transfer</li>
+            <li>Deploy-ready Vercel projects</li>
+            <li>Brand kits and UI</li>
+            <li>Future tools included</li>
+          </ul>
+
+          <a
+            href="#"
+            className="inline-block px-8 py-4 bg-black text-white rounded"
+          >
+            Buy Full Bundle
+          </a>
+        </div>
       </section>
+
+      {/* FOOTER */}
+      <footer className="py-10 text-center text-sm text-gray-500">
+        © 2025 AI Startup Studio
+      </footer>
 
     </main>
-  )
+  );
+}
+
+function ToolCard({ title, desc, status }) {
+  const statusColor =
+    status === "Ready"
+      ? "bg-green-100"
+      : status === "Private Beta"
+      ? "bg-yellow-100"
+      : "bg-blue-100";
+
+  return (
+    <div className="border rounded-lg p-6">
+      <h3 className="text-xl font-semibold mb-2">{title}</h3>
+      <p className="text-sm text-gray-600 mb-4">{desc}</p>
+      <span className={`text-xs px-2 py-1 rounded ${statusColor}`}>
+        {status}
+      </span>
+    </div>
+  );
 }
