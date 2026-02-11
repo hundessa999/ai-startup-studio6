@@ -3,12 +3,12 @@ export default function Home() {
     <main className="min-h-screen font-sans bg-white text-gray-900">
 
       {/* HERO */}
-      <section className="py-28 text-center bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white">
+      <section className="py-28 text-center bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white">
         <h1 className="text-5xl font-bold mb-4 drop-shadow-lg">
           Acquire Revenue-Ready AI Startups
         </h1>
         <p className="text-lg max-w-2xl mx-auto mb-8 drop-shadow-md">
-          Full source, deploy-ready, IP transfer included. Our AI portfolio is designed for founders, agencies, and AI flippers.
+          Full source, deploy-ready, and IP transfer included. Our AI portfolio is designed for founders, agencies, and AI flippers.
         </p>
         <a href="#available" className="inline-block px-8 py-4 bg-black text-white rounded-lg font-semibold shadow-lg">
           Explore AI Products
@@ -25,6 +25,7 @@ export default function Home() {
             desc="Automate social growth across TikTok, Instagram, and YouTube. Built for creators, agencies, and growth-focused businesses."
             modules="Includes teaser: Reelforge & AutoPrompt"
             status="Ready"
+            imgSrc="/images/sociaboost.png"
           />
 
           <ToolCard
@@ -32,6 +33,7 @@ export default function Home() {
             desc="Automated prompt workflows and reusable templates for faster execution."
             modules="Teaser modules included"
             status="Ready"
+            imgSrc="/images/autoprompt.png"
           />
 
           <ToolCard
@@ -39,6 +41,7 @@ export default function Home() {
             desc="Instant multi-channel ad copy for Meta, Google, TikTok, and more."
             modules="N/A"
             status="Ready"
+            imgSrc="/images/ai-ad-generator.png"
           />
 
         </div>
@@ -54,6 +57,7 @@ export default function Home() {
             desc="AI-powered conversion optimization for eCommerce stores."
             modules="Teaser: future modules included"
             status="Private Beta"
+            imgSrc="/images/storeboost.png"
           />
 
           <ToolCard
@@ -61,6 +65,7 @@ export default function Home() {
             desc="Automated SEO-focused niche content engine for blogs and websites."
             modules="Teaser included"
             status="Private Beta"
+            imgSrc="/images/nicheblog.png"
           />
 
         </div>
@@ -75,6 +80,7 @@ export default function Home() {
             desc="AI short-form video generator optimized for TikTok, Instagram Reels, and YouTube Shorts."
             modules="N/A"
             status="Coming Soon"
+            imgSrc="/images/ai-reels.png"
           />
         </div>
       </section>
@@ -112,7 +118,7 @@ export default function Home() {
 }
 
 // TOOL CARD COMPONENT
-function ToolCard({ title, desc, modules, status }) {
+function ToolCard({ title, desc, modules, status, imgSrc }) {
   const statusColor =
     status === "Ready"
       ? "bg-green-100 text-green-800"
@@ -121,7 +127,14 @@ function ToolCard({ title, desc, modules, status }) {
       : "bg-blue-100 text-blue-800";
 
   return (
-    <div className="border rounded-lg p-6 bg-white shadow-md hover:shadow-xl transition duration-300">
+    <div className="border rounded-lg p-6 bg-white shadow-md hover:shadow-2xl hover:scale-105 transition-transform duration-300">
+      {imgSrc && (
+        <img
+          src={imgSrc}
+          alt={title}
+          className="w-full h-40 object-cover rounded mb-4"
+        />
+      )}
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
       <p className="text-sm text-gray-700 mb-2">{desc}</p>
       {modules && <p className="text-xs text-gray-500 mb-4">{modules}</p>}
