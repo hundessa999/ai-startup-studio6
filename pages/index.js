@@ -1,20 +1,181 @@
-import Link from 'next/link'
-export default function Home(){return (
-  <div className='min-h-screen'>
-    <div className='container py-10'>
-      <header className='flex items-center justify-between'>
-        <div className='flex items-center gap-3'><div className='w-10 h-10 rounded-xl bg-white/10' /><h1 className='text-3xl font-bold'>AI Startup Studio</h1></div>
-        <a className='btn' href='https://vercel.com/new/clone?repository-url=https://github.com/YOUR_GITHUB_USERNAME/ai-startup-studio'>Deploy to Vercel</a>
-      </header>
-      <p className='mt-4 opacity-80'>Six premium AI SaaS apps — demo-ready and marketplace-optimized.</p>
-      <div className='mt-8 grid md:grid-cols-2 gap-6'>
-<div className="card"><div className="flex items-center gap-3"><img src="/public/logos/sociaboost.png" className="w-12 h-12 rounded-xl" alt="SociaBoost AI logo" /><div><div className="font-semibold">SociaBoost AI</div><div className="text-sm opacity-80">AI Social Growth Automation</div></div></div><img src="/public/screenshots/sociaboost.png" className="mt-4 rounded-xl border" alt="SociaBoost AI screenshot" /><div className="mt-3 flex gap-2"><a className="btn" href="/apps/sociaboost/dashboard">Open Demo</a><a className="btn" href="https://vercel.com/new/clone?repository-url=https://github.com/YOUR_GITHUB_USERNAME/ai-startup-studio">Deploy</a></div></div><div className="card"><div className="flex items-center gap-3"><img src="/public/logos/storeboost.png" className="w-12 h-12 rounded-xl" alt="StoreBoost AI logo" /><div><div className="font-semibold">StoreBoost AI</div><div className="text-sm opacity-80">AI Conversion Optimization for eCommerce</div></div></div><img src="/public/screenshots/storeboost.png" className="mt-4 rounded-xl border" alt="StoreBoost AI screenshot" /><div className="mt-3 flex gap-2"><a className="btn" href="/apps/storeboost/dashboard">Open Demo</a><a className="btn" href="https://vercel.com/new/clone?repository-url=https://github.com/YOUR_GITHUB_USERNAME/ai-startup-studio">Deploy</a></div></div><div className="card"><div className="flex items-center gap-3"><img src="/public/logos/autoprompt.png" className="w-12 h-12 rounded-xl" alt="AutoPrompt AI logo" /><div><div className="font-semibold">AutoPrompt AI</div><div className="text-sm opacity-80">Automated Prompt Workflows & Templates</div></div></div><img src="/public/screenshots/autoprompt.png" className="mt-4 rounded-xl border" alt="AutoPrompt AI screenshot" /><div className="mt-3 flex gap-2"><a className="btn" href="/apps/autoprompt/dashboard">Open Demo</a><a className="btn" href="https://vercel.com/new/clone?repository-url=https://github.com/YOUR_GITHUB_USERNAME/ai-startup-studio">Deploy</a></div></div><div className="card"><div className="flex items-center gap-3"><img src="/public/logos/ai-ad-script.png" className="w-12 h-12 rounded-xl" alt="AI Ad Script Generator logo" /><div><div className="font-semibold">AI Ad Script Generator</div><div className="text-sm opacity-80">Instant Multi-Channel Ad Copy</div></div></div><img src="/public/screenshots/ai-ad-script.png" className="mt-4 rounded-xl border" alt="AI Ad Script Generator screenshot" /><div className="mt-3 flex gap-2"><a className="btn" href="/apps/ai-ad-script/dashboard">Open Demo</a><a className="btn" href="https://vercel.com/new/clone?repository-url=https://github.com/YOUR_GITHUB_USERNAME/ai-startup-studio">Deploy</a></div></div><div className="card"><div className="flex items-center gap-3"><img src="/public/logos/nicheblog.png" className="w-12 h-12 rounded-xl" alt="NicheBlog AI logo" /><div><div className="font-semibold">NicheBlog AI</div><div className="text-sm opacity-80">Automated Niche Content Engine</div></div></div><img src="/public/screenshots/nicheblog.png" className="mt-4 rounded-xl border" alt="NicheBlog AI screenshot" /><div className="mt-3 flex gap-2"><a className="btn" href="/apps/nicheblog/dashboard">Open Demo</a><a className="btn" href="https://vercel.com/new/clone?repository-url=https://github.com/YOUR_GITHUB_USERNAME/ai-startup-studio">Deploy</a></div></div><div className="card"><div className="flex items-center gap-3"><img src="/public/logos/ai-reels.png" className="w-12 h-12 rounded-xl" alt="AI Reels Factory logo" /><div><div className="font-semibold">AI Reels Factory</div><div className="text-sm opacity-80">AI Short-Form Video Generator</div></div></div><img src="/public/screenshots/ai-reels.png" className="mt-4 rounded-xl border" alt="AI Reels Factory screenshot" /><div className="mt-3 flex gap-2"><a className="btn" href="/apps/ai-reels/dashboard">Open Demo</a><a className="btn" href="https://vercel.com/new/clone?repository-url=https://github.com/YOUR_GITHUB_USERNAME/ai-startup-studio">Deploy</a></div></div>
-      </div>
-      <h2 className='mt-10 text-xl'>What buyers get</h2>
-      <ul className='mt-3 opacity-80'><li>Full source & IP transfer</li><li>Brand kits + logos</li><li>Deploy-ready Vercel project</li><li>30-day onboarding support (optional)</li></ul>
-      <h2 className='mt-8 text-xl'>Testimonials</h2>
-      <div className='mt-3 grid md:grid-cols-2 gap-4'><div className='testimonial'>"This kit cut our time-to-market in half." — Product Founder</div><div className='testimonial'>"Clean UI and well-documented — great purchase." — Agency CTO</div></div>
-      <footer className='mt-12 opacity-70 text-sm'>© 2025 AI Startup Studio</footer>
-    </div>
-  </div>
-)}
+export default function Home() {
+  return (
+    <main className="font-sans">
+
+      {/* HERO SECTION */}
+      <section className="py-20 text-center">
+        <h1 className="text-4xl font-bold mb-4">
+          Launch or Flip Revenue-Ready AI Products Faster
+        </h1>
+
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
+          An AI startup studio building deploy-ready SaaS tools for founders,
+          agencies, and AI product flippers.
+        </p>
+
+        <a
+          href="#products"
+          className="inline-block px-6 py-3 bg-black text-white rounded-lg"
+        >
+          View Available AI Products
+        </a>
+      </section>
+
+      {/* TARGET AUDIENCE */}
+      <section className="py-16 bg-gray-50 text-center">
+        <h2 className="text-2xl font-semibold mb-8">Who This Is For</h2>
+
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div>
+            <p className="font-medium">Startup founders</p>
+            <p className="text-sm text-gray-600">
+              Launch AI products without building from scratch
+            </p>
+          </div>
+
+          <div>
+            <p className="font-medium">Agencies</p>
+            <p className="text-sm text-gray-600">
+              White-label AI tools for clients
+            </p>
+          </div>
+
+          <div>
+            <p className="font-medium">AI tool flippers</p>
+            <p className="text-sm text-gray-600">
+              Sell ready-made SaaS on marketplaces
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* AVAILABLE PRODUCTS */}
+      <section id="products" className="py-20">
+        <h2 className="text-3xl font-semibold text-center mb-12">
+          Available AI Products
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="border rounded-lg p-6">
+            <h3 className="text-xl font-semibold mb-2">SociaBoost AI</h3>
+            <p className="text-sm mb-2">
+              Automates social media growth and engagement using AI.
+            </p>
+            <p className="text-sm text-gray-600 mb-4">
+              Built for creators, brands, and agencies managing multiple platforms.
+            </p>
+            <span className="text-xs bg-green-100 px-2 py-1 rounded">
+              Ready
+            </span>
+          </div>
+
+          <div className="border rounded-lg p-6">
+            <h3 className="text-xl font-semibold mb-2">AutoPrompt AI</h3>
+            <p className="text-sm mb-2">
+              Pre-built AI prompt workflows for faster execution.
+            </p>
+            <p className="text-sm text-gray-600 mb-4">
+              Designed for developers, marketers, and AI operators.
+            </p>
+            <span className="text-xs bg-green-100 px-2 py-1 rounded">
+              Ready
+            </span>
+          </div>
+        </div>
+      </section>
+
+      {/* COMING SOON */}
+      <section className="py-20 bg-gray-50">
+        <h2 className="text-3xl font-semibold text-center mb-12">
+          Coming Soon / Private Beta
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="border rounded-lg p-6">
+            <h3 className="text-xl font-semibold mb-2">StoreBoost AI</h3>
+            <p className="text-sm mb-2">
+              Optimizes eCommerce content and conversions using AI.
+            </p>
+            <p className="text-sm text-gray-600 mb-4">
+              Built for online stores and digital brands.
+            </p>
+            <span className="text-xs bg-yellow-100 px-2 py-1 rounded">
+              Private Beta
+            </span>
+          </div>
+        </div>
+      </section>
+
+      {/* MONETIZATION */}
+      <section className="py-20 text-center">
+        <h2 className="text-3xl font-semibold mb-6">
+          How You Can Work With Us
+        </h2>
+
+        <ul className="max-w-xl mx-auto text-gray-700 mb-6 space-y-2">
+          <li>Buy individual AI products</li>
+          <li>Bundle multiple tools at a discount</li>
+          <li>White-label or custom deployment</li>
+          <li>Partnership or revenue-share options</li>
+        </ul>
+
+        <a
+          href="mailto:your@email.com"
+          className="inline-block px-6 py-3 bg-black text-white rounded-lg"
+        >
+          Request Pricing
+        </a>
+      </section>
+
+      {/* WHAT YOU GET */}
+      <section className="py-20 bg-gray-50 text-center">
+        <h2 className="text-3xl font-semibold mb-6">
+          What You Get
+        </h2>
+
+        <ul className="max-w-xl mx-auto text-gray-700 space-y-2">
+          <li>Full source code and IP transfer</li>
+          <li>Deploy-ready setup (Vercel compatible)</li>
+          <li>Brand assets and landing page</li>
+          <li>Documentation and setup guide</li>
+          <li>Limited onboarding support</li>
+        </ul>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="py-20 text-center">
+        <h2 className="text-3xl font-semibold mb-6">
+          Early Feedback
+        </h2>
+
+        <p className="max-w-xl mx-auto text-gray-600">
+          Feedback from early users and pilot partners testing our AI products.
+        </p>
+      </section>
+
+      {/* LEAD CAPTURE */}
+      <section className="py-20 bg-black text-white text-center">
+        <h2 className="text-3xl font-semibold mb-4">
+          Get Early Access or Full Product Details
+        </h2>
+
+        <form className="max-w-md mx-auto">
+          <input
+            type="text"
+            placeholder="Your name"
+            className="w-full mb-3 px-4 py-2 rounded text-black"
+          />
+          <input
+            type="email"
+            placeholder="Your email"
+            className="w-full mb-3 px-4 py-2 rounded text-black"
+          />
+          <button className="w-full px-4 py-2 bg-white text-black rounded">
+            Get Access
+          </button>
+        </form>
+      </section>
+
+    </main>
+  )
+}
